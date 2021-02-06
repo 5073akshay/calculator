@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.calculator {
+    background: black;
+    width: 363px;
+    height: 653px;
+    border-radius: 30px;
+    padding: 20px;
+    /*will make text white */
+    color: white;
+}
+
+.top-container {
+    /* 0 for top to bottom padding and 20px for left to right  */
+    padding: 0 20px;
+    /* isse ab status vali image samne aa jayegi niche nhi rahegi */
+    display: flex;
+    justify-content: space-between;
+    height: 130px;
+}
+
+.display {
+    font-size: 70px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    height: 70px;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.buttons-container {
+    display: grid;
+    /* fr matlab vo 60px har button ko de rha ha jitna humne niche mention kiya tha  */
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.button {
+    background: #333;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* taki jab hum hover kare uspe tab vo hath jase ban jaye */
+    cursor: pointer;
+    transition: filter .5s;
+}
+
+.button.function {
+    /* text black karne ka liye */
+    color: black;
+    background: #a5a5a5;
+}
+
+.button.operator {
+    background: #f1a33c;
+}
+
+.button.number-0 {
+    width: 145px;
+    border-radius: 55px;
+    justify-content: flex-start;
+    padding: 23px;
+    /* matlab 2 dabbe pe jake ruk jayega  */
+    grid-column: 1 / span 2;
+}
+
+.button:active,
+.button:focus {
+    filter: brightness(120%);
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
