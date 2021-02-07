@@ -11,6 +11,22 @@ body {
     padding: 10px;
 }
 
+a:link {
+    background: #a5a5a5;
+    border-radius: 6px;
+    margin: 1px;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #000;
+}
+
+.gitLink {}
+
 .calculator {
     background: black;
     width: 363px;
